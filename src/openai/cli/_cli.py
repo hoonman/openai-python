@@ -1,8 +1,10 @@
+#!usr/bin/env python
+# PYTHON_ARGCOMPLETE_OK
 from __future__ import annotations
 
 import sys
 import logging
-import argparse
+import argparse, argcomplete
 from typing import Any, List, Type, Optional
 from typing_extensions import ClassVar
 
@@ -162,6 +164,7 @@ def _parse_args(parser: argparse.ArgumentParser) -> tuple[argparse.Namespace, Ar
 
 def _main() -> None:
     parser = _build_parser()
+    argcomplete.autocomplete(parser)
     parsed, args, unknown = _parse_args(parser)
 
     if args.verbosity != 0:
