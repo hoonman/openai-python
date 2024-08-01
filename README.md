@@ -645,3 +645,5 @@ Python 3.7 or higher.
 
 ## Autocompletion for CLI
 ### Using Autocompletion Temporarily
+
+1. install openai if not installed already
